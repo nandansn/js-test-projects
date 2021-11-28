@@ -10,4 +10,20 @@ let sum = (array) => {
   return tot;
 };
 
-console.log(sum(gas.concat(food)));
+function analyze(exp) {
+  if (exp.total > 100) {
+    console.log('spending too much');
+  } else {
+    console.log('spending in control');
+  }
+}
+
+let expenses = {
+  gastotal: sum(gas),
+  foodtotal: sum(food),
+  total: sum(gas.concat(food)),
+};
+
+console.log(expenses);
+
+analyze(expenses);
