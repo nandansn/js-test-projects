@@ -11,6 +11,7 @@ example: <button onclick="alert('hello world')">Click me</button>
 Internal JS: JS functionality applied to group of elements in that particular page
 
 example:
+
 <script>
 document.querySelectorAll('.btn').forEach((button) => {
 button.addEventListener('click', (e) => {
@@ -412,3 +413,87 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 
     Button Example:
     	increment counter exe using bind
+
+### IIFE
+
+- Immediately Invokfed Function Expression
+- This is older approach, Now modules are used.
+- Simple approach to avoid global scope pollution
+- good way to protect the scope of your function and variables within it.
+
+#### Exe
+
+> create iife
+>
+> create iife with args
+>
+> create iife args and return
+
+### Hoisting
+
+- Function and var declarations are hoisted
+- safer to access only after initialized is good practice
+
+#### EXE
+
+> create var, let, const and apply hoisting. remember how compiler and interpreter works
+>
+> create function hoisting
+
+### Closure
+
+- gives you an access to outer function's scope from inner function
+- make private variables with closures
+- create inner function and return it
+- you can use object and set the function property and return multiple functions
+
+#### EXE
+
+> create closure to show account balance, deposit, withdraw check limit. pass name, initial balance
+>
+> to outer function and create balance variable in the outer function
+
+## ES6
+
+### ES6 Intro
+
+- Last major update ES6 - 2015
+- Now we have ES7, ES8, ES9 and ES10
+
+### var, let, const
+
+- using var you can define, update and redefine values
+- using let you can define and update values
+- using const you can define value, you can't change the primitive value like number,boolean, string
+- using const you can create reference, you can change the value of reference but not the reference.
+
+#### EXE
+
+> create primitive using let,var,const then do define, update and redefine.
+>
+> create non-primtive using let, var and const.
+
+### Function scope and Block Scope:
+
+- var, let, const
+- let, const - block scoped {} - anything within {}
+- var - function scoped
+
+### Template String/literals
+
+- use backticks ``
+
+#### EXE
+
+> create template literals with function combination
+
+### Template Strings - HTML
+
+#### EXE
+
+> Create html with template literals, make object with name, age, hobbies array
+
+### Tagged Template
+
+- combine the function and template literal
+- parse the test and args in the function use map and index to replace the literal variables
