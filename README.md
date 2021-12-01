@@ -554,4 +554,20 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 
 > Create functions and arrow functions with default parameters
 
+### Array, Variable, Object and Function Param Destructuring
 
+- faster/easier way to access/unpack values from arrays
+- objects into variables
+- object structuring, directly the property name or using alias name
+- we can access the nested property
+- we can use the destructuring in the function param
+
+#### EXE
+
+> skip the value, unavailable index,
+>
+> swap variables
+>
+> Object destructuring
+>
+> function param destructuring
