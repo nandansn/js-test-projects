@@ -497,3 +497,61 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 
 - combine the function and template literal
 - parse the test and args in the function use map and index to replace the literal variables
+
+### Arrow Functions
+
+- Arrow functions or Fat Arrow Functions
+- no name, always expression, assign to variable
+- no function keyword
+- 'this' will treat differently
+
+#### EXE
+
+> Empty args arrow function
+>
+> Single arg arrow function
+>
+> multiple arg arrow function
+>
+> multi line arrow function
+>
+> return single line and multi line
+>
+> return object single line
+>
+> arrow function as call back function, single line and multiline
+>
+> create html with arrow function
+
+### Arrow Functions - Object and 'this'
+
+- regular function : 'this' refers parent, left of the dot,
+- arrow function: refers to its current surrounding scope, from where its called.
+
+#### EXE
+
+> create arrow function in object compare with regular funciton using 'this'
+>
+> create call back settimeout
+
+### Arrow Function - Select Elements and 'this'
+
+- Use arrow function when required
+
+#### EXE
+
+> Use arrow function and regular function and analyze how they behave in the event listener call back
+>
+> Use setimeout function within the event listener and try using arrow and regular function.
+
+### Default Parameters and Hositing
+
+- Default parameter value is used when there are chances people dont pass the args
+- When u pass the arg, then the actual value will take precedence
+- Hositing, will not work for the arrow functions and function expression, try with let, var and const
+
+#### EXE
+
+> Create functions and arrow functions with default parameters
+
+
