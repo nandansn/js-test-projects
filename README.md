@@ -571,3 +571,92 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 > Object destructuring
 >
 > function param destructuring
+
+### New String Methods
+
+- startsWith, endsWith, includes, repeat
+
+#### EXE
+
+> Manipulate string using startsWith, endsWith, includes, repeat
+
+### For Of - Loop
+
+- use to iterate the string and array
+
+#### EXE
+
+> try to iterate the string chars
+>
+> try to iterate the array
+
+### Spread Operator ...
+
+- Allows an iterable to spread/expand individually inside reciever
+- split into single items and copy them
+- copying is better option compared to referencing, copy wont affect the original value.
+- ES8 spread operator can be used to copy the object
+- Function args
+
+#### EXE
+
+> use spread operator to copy the array
+>
+> use spread operator to copy the object
+>
+> use spread operator and manipulate dom elements, get list of element content and display in span
+
+### Rest Operator ...
+
+- we can use for array and object
+- ...rest operator should be the last element
+- ...rest operator for param and ...spread operator for args
+- can be combined with destructuring
+
+#### EXE
+
+> use with arrays
+>
+> use with object
+>
+> use with params in the function
+
+### Array.of, Array.from
+
+- .of and .from not on the prototype
+- .of creates new Array instance from a variable number of arguments.
+- .from returns Array object from any object with length property or iterable object.
+- .from turns array-like/ish into array - string, nodeList, set
+
+#### EXE
+
+> use .of create new array
+>
+> use .from with NodeList, String or Array
+>
+> use .from with variable arguments and try to find total of numbers
+
+### find, findindex, every, some
+
+- find returns matched single item
+- findIndex will return the index of the matched item
+- every item should match the condition
+- some, atleast one item match
+
+#### EXE
+
+> use find, findIndex, every and some
+
+### Modules
+
+- named export: for JS running on browser, you need to add module attribute in the script tag, then you need to the file extension
+
+- export default, you can use any name to import it.
+
+#### EXE
+
+> add people names on button click, use data module and map in the event listener, put the logic in seperate module
+
+#### ERROR
+
+> https://stackoverflow.com/questions/58211880/uncaught-syntaxerror-cannot-use-import-statement-outside-a-module-when-import
