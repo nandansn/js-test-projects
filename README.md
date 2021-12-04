@@ -725,4 +725,22 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 - select method to select element or group of elements, 
 - node-list = array-like object.
 - index, length property not array methods.
+- returns HTMLCollection
+
+### getElementsByClassname
+
+- select methode to select element or group of elements
+- node-list = array-like object.
+- index, length property not array methods.
+- returns HTMLCollection
+
+### getQuerySelector
+
+- returns single element, the type is object.
+
+
+### getQuerySelectorAll
+
+- returns NodeList, Collection of nodes
+- it has item, entries, forEach, keys, values methods.
 
