@@ -696,3 +696,33 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 - must have async, async will return promise.
 - await, wait till the promise is settled
 - error handling - try/catchcatch
+
+## DOM
+
+### DOM Comcept
+
+	- dom is used to select the element and apply the css affect or to make any operation
+	- we can apply the effect dierctly by traversing to the object property
+	- we can use get methods to get element and access the property and apply the styling.
+	- get methods return node or node list objects, they are like array objects.
+
+### Window and DOM 
+
+- window is browser api
+- document refers to the page that displayed in the browser window.
+- to check the property of the document you can use console.dir(document)
+
+### getElementById
+
+- id refers to the unique value of the element in the page.
+
+#### EXE
+
+- getElementById and apply different styles.
+
+### getElementsByTagName
+
+- select method to select element or group of elements, 
+- node-list = array-like object.
+- index, length property not array methods.
+
