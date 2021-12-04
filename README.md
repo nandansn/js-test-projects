@@ -660,3 +660,39 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 #### ERROR
 
 > https://stackoverflow.com/questions/58211880/uncaught-syntaxerror-cannot-use-import-statement-outside-a-module-when-import
+
+### Synchronous
+
+- JS is single threaded, executed one statement at a time
+
+- Make soup example: chop onion, chop carrots, boil water 10 seconds, add carrot boil 5 seconds, add onion boil 5 seconds
+
+### ASynchronous
+
+- we can do processing in the background
+- settimeout browser functionality, like this we can do fetch data, get geo location setTimer etc.
+- we can modify the make soup example using ASynchronous settimeout
+
+### Callbacks
+
+- Nesting of callbacks
+- nesting callbacks lead to callback hell
+- callback hell with dom example
+
+### Promises
+
+- Solution to callback hell
+- Promises state - Pending, Resolved, Rejected
+- then catch - pass another callback
+- you create Promise constructor, you pass call back function, for the call back function you pass resolve and reject as params
+- initial state of the promise is pending
+- resolve and reject are functions that sets the PromiseValue and PromiseStatus
+- how to acccess the promise resolve data using 'then' within 'then' you can pass callback function, resolve data accessed in this callback function.
+- how to catch promise reject, using the catch function
+- you add condition like if data present or dom element present call resolve else reject
+
+### Async/Await
+
+- must have async, async will return promise.
+- await, wait till the promise is settled
+- error handling - try/catchcatch
