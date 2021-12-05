@@ -699,14 +699,14 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 
 ## DOM
 
-### DOM Comcept
+### DOM Concept
 
-	- dom is used to select the element and apply the css affect or to make any operation
-	- we can apply the effect dierctly by traversing to the object property
-	- we can use get methods to get element and access the property and apply the styling.
-	- get methods return node or node list objects, they are like array objects.
+    - dom is used to select the element and apply the css affect or to make any operation
+    - we can apply the effect dierctly by traversing to the object property
+    - we can use get methods to get element and access the property and apply the styling.
+    - get methods return node or node list objects, they are like array objects.
 
-### Window and DOM 
+### Window and DOM
 
 - window is browser api
 - document refers to the page that displayed in the browser window.
@@ -715,6 +715,7 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 ### getElementById
 
 - id refers to the unique value of the element in the page.
+- returns the object type
 
 #### EXE
 
@@ -722,7 +723,7 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 
 ### getElementsByTagName
 
-- select method to select element or group of elements, 
+- select method to select element or group of elements,
 - node-list = array-like object.
 - index, length property not array methods.
 - returns HTMLCollection
@@ -738,9 +739,35 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 
 - returns single element, the type is object.
 
-
 ### getQuerySelectorAll
 
 - returns NodeList, Collection of nodes
 - it has item, entries, forEach, keys, values methods.
 
+### Navigating the doms
+
+- children - returns HTMLCollection
+- childNodes - returns NodeList, all childnodes including whitespace, which is treated as a textnode.
+- parentElement - returns the
+- nextSibling, previousSibling - includes text node
+- nextElementSibling, previousElementSibling - returns HTMLElement object
+- textContentValue: nodeValue, textContent
+- nodeValue: need to consider the text node.
+- textContent: we can directly use with the object
+
+#### EXE
+
+> use ul and li , try to get the list items, using childNodes
+>
+> get firstChild and lastChild
+>
+> add button, event listener and add async and wait to apply some style
+
+
+### Attribute
+
+- getAttribute
+- setAttribute
+- classList - you can add the class names in the lisr using add() method of classList property.
+- className - you can set single or multiple classnames, names seperated by space.
+- set text using textContent property
