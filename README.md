@@ -771,3 +771,35 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 - classList - you can add the class names in the lisr using add() method of classList property.
 - className - you can set single or multiple classnames, names seperated by space.
 - set text using textContent property
+
+
+#### EXE
+
+> use set and get attribute for the html elements
+>
+> use classList and className to update the multiple class properties.
+>
+> try to set text using textContent property.
+
+### createElement, createTextNode, appendChild, remove , removeChild
+
+- createElement is used to create new html element, 
+- createTextNode is used to create new text node to set the text value
+- appendChild is used to add the element or node with in the another element or node
+- remove to remove the selected element.
+- removeChild to remvoe the element within the element. 
+
+### insertBefore, replaceChild, prepend innerText
+
+- insert before takes 2 param, one is the html element and other before which element we need insert
+- prepend is used to place the newly created element before all the elements with in an element.
+
+#### EXE
+
+> create form name, age implement form validation warning or error message, use inline css for color property,
+>
+> add the name and form age value as person object, have display button to display all the name age as list
+>
+> add text to enter name, add button to remove the entered name from the list elements
+
+
