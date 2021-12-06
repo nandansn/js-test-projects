@@ -763,7 +763,6 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 >
 > add button, event listener and add async and wait to apply some style
 
-
 ### Attribute
 
 - getAttribute
@@ -771,7 +770,6 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 - classList - you can add the class names in the lisr using add() method of classList property.
 - className - you can set single or multiple classnames, names seperated by space.
 - set text using textContent property
-
 
 #### EXE
 
@@ -783,16 +781,63 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 
 ### createElement, createTextNode, appendChild, remove , removeChild
 
-- createElement is used to create new html element, 
+- createElement is used to create new html element,
 - createTextNode is used to create new text node to set the text value
 - appendChild is used to add the element or node with in the another element or node
 - remove to remove the selected element.
-- removeChild to remvoe the element within the element. 
+- removeChild to remvoe the element within the element.
+- to access elements with in the element, use that element object and querSelector method,
+  like element.querySelector()
 
 ### insertBefore, replaceChild, prepend innerText
 
 - insert before takes 2 param, one is the html element and other before which element we need insert
 - prepend is used to place the newly created element before all the elements with in an element.
+
+### innerHTML, textContent
+
+- innerHTML gets the whole html tag and its content
+- textContent gets the text content of the htmlElement
+- with innerHtml we can use template string to set the child html elements instead of using appendChild method.
+
+### style
+
+- is the property of the html element, this can be used to apply the css
+
+### Events
+
+- you can use onclick attribute to call the function, which old style of code or addEventListener
+- click event: select element, addEventListener('event', callbackfunction)
+- for styling define the css seperately and use the class list to play around
+
+### function reference
+
+- decalare the fucntion and call the function as reference
+- like addEventListener('event', function reference)
+
+### mouse events
+
+    - few events from list, mousedown, mouseup, mouseenter - moved on to an element, mouseleave - moved out of an element.
+
+### key events
+
+- keypress -key is presses, keydown - when key is down, keyup - when key is released.
+- use console.dir(element) => displays the element object
+
+### Event Object
+
+- event object argument e, evt
+- info about triggered event
+- event.type
+- event.cuurentTarget => points to element triggered the event
+- this keyword => points to the current element
+- preventDefault - prevents default behaviour
+
+### CurrentTarget vs Target
+
+- currentTarget - always refers to the element to which the event handler has been attached to.
+- target - refers to the element on which the event triggered.example nested element,
+  like <button>Click<strong>Strong Nested</strong></button>
 
 #### EXE
 
@@ -801,5 +846,5 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 > add the name and form age value as person object, have display button to display all the name age as list
 >
 > add text to enter name, add button to remove the entered name from the list elements
-
-
+>
+> use innerHtml to set new html elements passing dynamic values, also use textContent to set/get the values
