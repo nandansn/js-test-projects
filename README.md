@@ -848,3 +848,53 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 > add text to enter name, add button to remove the entered name from the list elements
 >
 > use innerHtml to set new html elements passing dynamic values, also use textContent to set/get the values
+>
+> try to implement the target and target 
+
+### Event Propogation - Event Bubbling, Event Capturing
+
+- allows selecting dynamic elements
+- ordere in which the events are fired.
+- event bubbling - clicked element first then bubbles up default, this bubbles from child to parent element, if the parent element has binded with event listener
+- we can stop the event bubbling on the particular element using stopPropogation
+- event capturing - fires at the root and fires until the target is reached, can be used on the dynamically generated element, how to bind the event listener for dynamically geenrated elements that is through adding listener to the parent element, that will hold the dynamic child elements
+
+
+#### EXE
+
+> add event on the parent element and try to click the child element
+>
+> stop the event propogation on the element
+>
+> add person(with name, age, city), then list the person names on lickining the person name it should display the person details
+
+
+### Forms - Form submit event, prevent default , how to get the value.
+
+- form add event listener for 'submit
+- preventDefault this will prevent the default behaviour of the form.
+
+### Local Storage
+
+- web storage api - provided by browser.
+- session storage, local storage
+- session storage will be live within the tab,
+- local storage will be live between opening and closing of the window,
+- both storage stores data in key, value pair, key value pair type is string
+- setItem, getItem removeItem, clear
+
+- JSON.stringify() and JSON.parse() used to store and get complicated values like string or object.
+
+
+
+### EXE
+
+- add form for some calculation diaplay the result with styling
+- store form data in local storage pass between pages
+
+
+
+
+
+
+
