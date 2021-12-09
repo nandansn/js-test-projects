@@ -26,7 +26,7 @@ function getText() {
 }
 
 function getPerson() {
-    const url = './person.json'
+    const url = './person.json'ł
     const method = "GET"
     
     xhr.open(method, url)
