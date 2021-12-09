@@ -889,8 +889,20 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 
 ### EXE
 
-- add form for some calculation diaplay the result with styling
+- add form for some calculation display the result with styling
 - store form data in local storage pass between pages
+
+### AJAX
+
+- XMLHTTPRequest - request to server
+- open
+- readyState
+- status - UNSENT, OPENED, HEADERS_RECEIVED, LOADING, DONE
+- onProgress
+- onLoad
+- send
+- you can use onReadyStateChange to capture the status and do further processing
+
 
 
 
