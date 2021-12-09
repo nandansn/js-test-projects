@@ -895,18 +895,35 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 ### AJAX
 
 - XMLHTTPRequest - request to server
-- open
-- readyState
+- open  - set request method with methos, url etc
+- send - initiates the request
+- onLoad - will initiated when the request completed
+- readyState - will initiated when the state of the request get changed
 - status - UNSENT, OPENED, HEADERS_RECEIVED, LOADING, DONE
-- onProgress
-- onLoad
-- send
 - you can use onReadyStateChange to capture the status and do further processing
 
+Refer: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/status
+
+### AJAX Promise
+
+- use the xml open and send with in the promise
+- set the onload property or onReadyStateChange with the resolve and reject condition
+
+### Fetch
+
+- this is simple compared to XMLHTTPRequest
+- need to use fetch() method, pass URL, 
+- fetch method will return the promise with response data,
+- from response data.json() will return promise
+- from data.json() promise data we need to get the actual response value
+- ref: https://developer.mozilla.org/en-US/docs/Web/API/fetch
 
 
+### Async/Await
 
-
-
+- simple than fetch
+- need to use try / catch to catch the error
+- await is used when the method call returns the promise
+- async added before function declaration
 
 
