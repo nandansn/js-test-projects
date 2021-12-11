@@ -926,4 +926,5 @@ Refer: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/status
 - await is used when the method call returns the promise
 - async added before function declaration
 
+### ES6 Slider
 
