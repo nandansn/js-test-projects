@@ -649,10 +649,39 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 
 ### Modules
 
+- provide strucure
+- split code into small files
+- share code across app
+- same as react
+- use server extension locally
+- used in projects
+
 - named export: for JS running on browser, you need to add module attribute in the script tag, then you need to the file extension
 
 - export default, you can use any name to import it.
 
+#### Named Export
+
+- export const name = 'nanda', use export keyword before the variable for named export
+- cannot use import statement outside the module error: to resolve this you need to see specific the type attribute as 'module' in the script tag.
+- when you are importing you need to say the extension
+- multipe imports import {a,b} from './data.js'
+- this will work in the file server, means the pages and stati html files need to be in the server like tomcat
+- without server it willl not work
+- export module name and import name should match
+- to export multiple things you use like export {a,b,c}
+- we may endup in the module name conflicts when importing multiple modules, to avoid this, use with the alias like export {name as aliasName}
+
+
+#### Default Export
+
+- export default variableName/functionName
+- with the default, names used to import can be anything
+
+#### Aggregate Modules
+
+- we can create a module and in that you can group the submodules and import it like circe,triangle,square are submodule, we can group the export in shapes module, then we can import from shapes module
+- ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#aggregating_modules
 #### EXE
 
 > add people names on button click, use data module and map in the event listener, put the logic in seperate module

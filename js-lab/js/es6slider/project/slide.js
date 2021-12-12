@@ -29,14 +29,8 @@ function slider() {
             
         },
         next: function () {
-            
-            
             console.log(names[index++])
             checkindex();
-            
-            
-            
-            
         },
     }
 }
