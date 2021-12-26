@@ -370,7 +370,7 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 - common practice - Declare or Define the function name Starting with cap letter
 - new will point to this.
 
-- exe: create construcor Person function with names and method
+- exe: create constructor Person function with names and method
 
 ### Constructor Property:
 - All objects in JS have access to 'constructor' property that returns constructor function that created it.
@@ -473,7 +473,7 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 
 - gives you an access to outer function's scope from inner function
 - make private variables with closures
-- create inner function and return it
+- create inner function and return it, function can return function
 - you can use object and set the function property and return multiple functions
 
 #### EXE
@@ -481,6 +481,15 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 > create closure to show account balance, deposit, withdraw check limit. pass name, initial balance
 >
 > to outer function and create balance variable in the outer function
+
+### Currying,
+
+- currying is transformation of functions, that translates a function from callables f(a,b,c) into callable as f(a)(b)(c)
+- it transforms the function
+- Fixed-Length functions only,
+	- currying requires function to have fixed number of arguments
+	- function that uses rest parameters, such as f(..args), can't be curried this way.
+- we can use _.curry(func) from loadash
 
 ## ES6
 
@@ -684,6 +693,7 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 - same as react
 - use server extension locally
 - used in projects
+- need to use local server file extension
 
 - named export: for JS running on browser, you need to add module attribute in the script tag, then you need to the file extension
 
@@ -692,10 +702,10 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 #### Named Export
 
 - export const name = 'nanda', use export keyword before the variable for named export
-- cannot use import statement outside the module error: to resolve this you need to see specific the type attribute as 'module' in the script tag.
+- cannot use import statement outside the module error: to resolve this you need to set specific type attribute as 'module' in the script tag.
 - when you are importing you need to say the extension
-- multipe imports import {a,b} from './data.js'
-- this will work in the file server, means the pages and stati html files need to be in the server like tomcat
+- multipe imports, import {a,b} from './data.js'
+- this will work in the file server, means the pages and static html files need to be in the server like tomcat
 - without server it willl not work
 - export module name and import name should match
 - to export multiple things you use like export {a,b,c}
@@ -714,6 +724,16 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 #### EXE
 
 > add people names on button click, use data module and map in the event listener, put the logic in seperate module
+
+
+#### Dynamic import
+
+- we can use import() function to load the modules dynamically, import() function returns the promise.
+- scenario: dynamic imports can be used on some condition, this avoids import of the file, unnecessarily.
+- faster code, improves the performance
+- https://www.youtube.com/watch?v=ddVm53j80vc&ab_channel=WebDevSimplified
+
+
 
 #### ERROR
 
