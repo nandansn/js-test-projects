@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capturing</title>
+    <style>
+        div.container {
+            width: 400px;
+            height: 400px;
+            background-color:ivory;
+            border: lightcoral solid 3px;
+        }
+
+        div.list-emp {
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+        }
+        ul {
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="list-emp">
+            <ul>
+                <li><a href="#">Nanda</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    let cont = document.getElementsByClassName('container')[0]
+  
+    cont.addEventListener('click', function (e) {
+        console.log(e.target)
+    }, true)
+
+    // let link = document.querySelector('div.list-emp ul li a')
+    // console.log(link)
+
+    // link.addEventListener('click', function (e) {
+    //     console.log(e.target)
+    // }, true)
+
+</script>
+</html>

@@ -899,7 +899,7 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 
 ### key events
 
-- keypress -key is presses, keydown - when key is down, keyup - when key is released.
+- keypress - key is pressed, keydown - when key is down, keyup - when key is released.
 - use console.dir(element) => displays the element object
 
 ### Event Object
@@ -935,7 +935,7 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 - ordere in which the events are fired.
 - event bubbling - clicked element first then bubbles up default, this bubbles from child to parent element, if the parent element has binded with event listener
 - we can stop the event bubbling on the particular element using stopPropogation
-- event capturing - fires at the root and fires until the target is reached, can be used on the dynamically generated element, how to bind the event listener for dynamically geenrated elements that is through adding listener to the parent element, that will hold the dynamic child elements
+- event capturing - fires at the root and fires until the target is reached, can be used on the dynamically generated element, how to bind the event listener for dynamically generated elements that is through adding listener to the parent element, that will hold the dynamic child elements
 
 
 #### EXE
@@ -950,7 +950,7 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 ### Forms - Form submit event, prevent default , how to get the value.
 
 - form add event listener for 'submit
-- preventDefault this will prevent the default behaviour of the form.
+- preventDefault this will prevent the default behaviour of the form. default behaviour is sending the data to server and refreshing the page
 
 ### Local Storage
 
@@ -959,7 +959,9 @@ forEach, map, filter, find, reduce => these methods would be really helpful whil
 - session storage will be live within the tab,
 - local storage will be live between opening and closing of the window,
 - both storage stores data in key, value pair, key value pair type is string
-- setItem, getItem removeItem, clear
+- localStorage - methods: setItem, getItem removeItem, clear
+- sessionStorage - methods: setItem, getItem removeItem, clear
+
 
 - JSON.stringify() and JSON.parse() used to store and get complicated values like string or object.
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cont">person 1</div>
+    <div class="cont">person 2</div>
+    <div class="cont">person 3</div>
+    <div class="cont">person 4</div>
+    <div class="cont">person 5</div>
+    <div class="cont">person 6</div>
+    <div class="cont">person 7</div>
+    <div class="cont">person 8</div>
+    <div class="cont">person 9</div>
+    <div class="cont">person 10</div>
+</body>
+
+<script>
+    let divs = document.getElementsByClassName('cont')
+    let items = [...divs]
+    items.forEach(item => {
+        item.style.color = 'red'
+    })
+</script>
+</html>

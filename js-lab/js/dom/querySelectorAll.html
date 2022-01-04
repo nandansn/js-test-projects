@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <ul>
+            <li>nanda 1</li>
+            <li>nanda 2</li>
+            <li>nanda 3</li>
+            <li>nanda 4</li>
+            <li>nanda 5</li>
+        </ul>
+    </div>
+    
+</body>
+<script>
+    let ul = document.querySelector('.container ul')
+    Array.from(ul.childNodes).filter(item => item.nodeType !== Node.TEXT_NODE ).forEach(item => console.log(item.textContent))
+    
+</script>
+</html>
