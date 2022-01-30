@@ -10,3 +10,4 @@ console.log(
     return total;
   }, 0)
 );
+
