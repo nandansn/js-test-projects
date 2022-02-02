@@ -143,7 +143,8 @@
 
 ### For Of - Loop
 
-- use to iterate the string and array
+- use to iterate the string, array, map, set - not object
+- unlike forEach we can use break and continue in the forof
 
 #### EXE
 
