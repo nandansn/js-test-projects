@@ -21,6 +21,7 @@ let all = [...boys,...gals,...bfs]
 console.log(all)
 
 
+
 // spread objects
 
 let person = {name:'nanda',age:40,contact:{mobile:100,mail:'nan@123.com'}}
@@ -31,3 +32,14 @@ let newPerson = {...person,...person.contact, city:'erode'}
 
 console.log(name,age,mobile,city)
 console.log(newPerson)
+
+
+// spread args
+
+let names = ['nanda','kumar']
+
+function fullName(fname,lname) {
+    return fname + lname
+}
+
+console.log(fullName(...names))

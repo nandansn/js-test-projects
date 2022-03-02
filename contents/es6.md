@@ -174,6 +174,7 @@
 - ...rest operator should be the last element
 - ...rest operator for param and ...spread operator for args
 - can be combined with destructuring
+- to collect/gather the elements
 
 #### EXE
 
@@ -189,7 +190,7 @@
 - .of creates new Array instance from a variable number of arguments.
 - .from returns Array object from any object with length property or iterable object.
 - .from turns array-like/ish into array - string, nodeList, set
-- .from we can use for arguments, inside the functtion
+- .from we can use for "arguments", inside the functtion
 
 #### EXE
 

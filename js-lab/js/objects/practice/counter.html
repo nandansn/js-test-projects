@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Counter</h2>
+        <button id="ct-btn">Increment</button>
+    </div>
+    <div>
+        <h2 id="ct-value">0</h2>
+    </div>
+</body>
+<script>
+
+    
+    function counter() {
+        this.count++;
+        document.getElementById('ct-value').innerText = this.count;
+    }
+
+    let increment = {
+        count:0,
+    }
+
+    let countBinder = counter.bind(increment);
+
+    document.getElementById('ct-btn').addEventListener('click', countBinder)
+</script>
+</html>
