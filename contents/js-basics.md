@@ -215,3 +215,109 @@
   - start value
   - condition
   - counter
+
+### String properties and methods
+
+- you can refer the string methods from forums
+- you can access the string methods usinf string var or string literals
+- length, property find the lengt of the string
+- toUpperCase() method to make the string as upper case chars
+- charAt(0), method returns the char at index '0'
+- indexOf('a'), method returns the char position in the string.
+- includes('abc'), method to check the substring exist or not
+- slice(0,2), method returns the substring, chars from 0 to 2
+- slice(-3), method returns the substring, chars from last
+
+### Template literals
+
+- backticks ``
+- Interpolation ${} - insert expression
+
+### Array Properties and Methods
+
+- length, property returns the number of items in the array
+- concat(), we can concat arrays
+- reverese(), method to return the items in reversed order.
+- unshift(), to add item at the begining of the array.
+- shift(), to remove the item at the begining of the array.
+- push(), to add the item at the last
+- pop(), to remove the item
+  from the last.
+- splice(), mutates original array, pass the index and number of items, removes the items from the specified index.
+
+### Value vs Reference
+
+- when assigning primitive data type to variable, any changes are made directly to that value, without affecting original value.
+
+- When assigning non-primitive data type value to a variable, is done by reference so any changes will affect all the references.
+
+- example,
+
+> let num1 = 1;
+>
+> let num2 = num1;
+>
+> num1 = 3; // num2 will not be affected
+>
+> let p = {name:'nanda'}
+>
+> let k = p; // by reference
+>
+> k.name = 'kumar' // p also get affected
+
+### null and undefined
+
+- undefined - js cannot find value for this
+
+  - variable without value
+  - missing function arguments
+  - missing object properties
+
+- null - developer sets the value
+
+> let num = 20 + null // result 20, null considered as 0
+>
+> let num2 = 20 + undefined // result NaN
+
+### Truthy or Falsy
+
+- in javascript condition there is truthy or falsy value, for example, let s = 'a'
+  is truthy and s = '' is falsy
+
+### Ternary operator
+
+- condition ? (runs if true) : (runs if false)
+
+### Global scope
+
+- let
+  - variable outside the code block {} said to be in global scope.
+  - we can access from anywhere
+  - name collisions, by mistake the value in the variable may be affected
+
+### local scope
+
+- var
+  - cannot be accessed from outsie code block {}
+  - if - not var
+
+### Variable Lookup
+
+- how the variable is looked up, check the variable in the local scope, if not found in the next level of scope and it goes on to the global scope
+
+> let number = 10;
+>
+> function calc(m1, m2) {
+> let result_1 = m1 + m2 + number; // number will be looked in local and then global if > not found
+> return result_1;
+> }
+>
+> console.log(calc(20, 30));
+
+### Call back functions, Higher order functions, Functions as first class objects
+
+- Functions as first class objects - stored in a variable(expression), passed as an argument to another function, return from the function (closure)
+
+- Higher Order Function - accepts another function as an argument or returns another function as a result.
+
+- Call back function - passed to another function as an argument and executed inside the function. 
