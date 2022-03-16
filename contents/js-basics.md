@@ -321,3 +321,46 @@
 - Higher Order Function - accepts another function as an argument or returns another function as a result.
 
 - Call back function - passed to another function as an argument and executed inside the function. 
+
+### Array Iterators
+
+- there are powerful array methods to iterate over array, no for loop required.
+- accept call back function as an argument, calls callback against each item in a array.
+reference item in the call back parameter.
+
+
+#### array iterators - forEach
+- does not return new array
+- pass the function to forEach method, always try to define the method outside, this way forEach call will look neat.
+
+#### array iterators - map
+
+- does return new array
+- does not change size of original array
+- uses values from original array when making new one
+- callback function should return 
+
+#### array iterators - filter
+
+- does return new array.
+- size of new array depends on the filter condtion
+- values returned in the new array filtered based on the condition
+- callback function should return 
+
+#### array iterator - find
+
+- returns object
+- returns first match, if no match undefined
+- great for getting unqiue value
+
+#### array iterator - reduce
+
+- iterates, callback function
+- reduce to a single value - number, array, object
+- 1 parameter ('acc') - total of all calculations
+- 2 parameter ('curr') - current iteration/value
+- return acc
+
+
+
+
