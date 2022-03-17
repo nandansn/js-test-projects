@@ -361,6 +361,20 @@ reference item in the call back parameter.
 - 2 parameter ('curr') - current iteration/value
 - return acc
 
+### Math and Date Objects
+
+#### Math
+
+- Math.sqrt(number);
+- Math.random()
+- Math.floor(number);
+- Math.ceil(number);
+
+#### Date
+
+- Date(), class
+- using the date object we can get the index of the month in a year from 0 to 11,
+- using the date object we can get the index of the day in a week from 0 to 6,
 
 
 
