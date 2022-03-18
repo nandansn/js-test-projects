@@ -36,7 +36,7 @@
     person.info() // in the info function this refers to the person object
 
 - 'this' defaults to without object.
-- arrow functions - pump the breaks.
+- arrow functions/anonymous function - pump the breaks.
 - 'this' points to the left of dot.
 - if you are invoking the function without the object then the 'this' within the funciton refers to the window object, if it is running on node then empty object.
     let dp = () => {
@@ -113,6 +113,7 @@
 - we need to define the constructor method within the class
 - we can define the methods and this is common to all the objects, unlike function factory or construcor functions this method wont be copied when new object getting created
 - defined methods will be part of the prototype
+- constructor overloading not allowed
 
 - exec: convert the Bank using ES6 class syntax
 
@@ -121,7 +122,7 @@
 ### Call
 - runs instanly, 
 - arguments - list of items
-- using call() method binding the object and the funtion that is outside the object, 'this' used within the function point to the object passed in the call method.
+- using call() method binding the object and the function that is outside the object, 'this' used within the function point to the object passed in the call method.
 
 	const nanda = { age:40};
 	const sanmathi = { age:36 };
@@ -152,5 +153,6 @@
 - arguments - list of items
 - while creating the object itself we bind the function, this function will be called later based on some condtion
 - during event listener we may need to execute the function on the object
+- while binding it returns the function, store it in variable like expressionm pass it as call back or call it later.
 - Button Example:
     increment counter exe using bind
