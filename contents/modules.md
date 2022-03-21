@@ -17,6 +17,10 @@
 - 'export default' this is used to export the var/function,
 - when you use default export, while importing you can use any name in the import.
 
+#### References:
+
+- https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export
+
 
 #### Note
 - when you work locally, use the live server, otherwise you get the CORS policy error.
