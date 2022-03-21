@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1 id="header">nanda</h1>
+    <button id="btn">Change Header Color</button>
+    <div id='fruits'>
+        <ul>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Pineapple</li>
+            <li>Lemon</li>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Pineapple</li>
+            <li>Lemon</li>
+        </ul>
+        <button id='btn-unique'>Unique Fruits Only</button>
+    </div>
+</body>
+
+<script>
+    let btnElement = document.getElementById('btn')
+    btnElement.addEventListener('click', function () {
+        document.getElementById('header').style.backgroundColor = '#37BABA'
+    })
+
+    let fruits = document.getElementsByTagName('li');
+
+    
+
+    let uniqueFruits = new Set(Array.from(fruits).map(item => {return item.innerText}))
+    
+    document.getElementById('btn-unique').addEventListener('click',function (params) {
+        let uniqueList = Array.from(uniqueFruits).map(item => {
+            
+            return `<li>${item}</li>`
+        })
+        let list = uniqueList.join('')
+        console.log(list);
+        let uListElement = document.createElement('ul');
+        uListElement.innerHTML = list;
+        document.getElementById('fruits').appendChild(uListElement);
+    })
+    
+</script>
+</html>

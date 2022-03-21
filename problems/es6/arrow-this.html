@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="greet">
+
+    </div>
+    <div class="btn">
+        <button>Click Me</button>
+    </div>
+</body>
+
+<style>
+    .btn {
+        background-color: ;
+    }
+</style>
+<script>
+    let greetElement = document.querySelector('.greet');
+    let btnElement = document.querySelector('.btn button');
+
+    
+
+    btnElement.addEventListener('click', function () {
+        console.log('clicked');
+        greetElement.innerHTML = "Hello"
+        console.log(this) // this refers to button element, 
+
+        setTimeout(() => {
+            this.style.backgroundColor = 'blue'
+            this.style.borderColor = "white"
+            this.style.borderWidth = "10px"
+
+        }, 2000);
+    })
+
+
+
+</script>
+</html>

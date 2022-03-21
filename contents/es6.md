@@ -45,8 +45,8 @@
 
 ### Tagged Template
 
-- combine the function and template literal
-- parse the test and args in the function use map and index to replace the literal variables
+- combine the function name and template literal
+- defint the function with the text and args(as ...vars), text will be an array, use map, map with index and text item, pass replace params in the text with the vars[index]
 
 ### Arrow Functions
 
@@ -88,6 +88,8 @@
 			console.log(this) => this refers to the surrounding parent, here this is a
 		}, 2000)
 	}
+
+	- to handle this for arrow function outside the arrow function assign the 'this' to some variable and use the defined variable in the arrow function	
 
 #### EXE
 
@@ -159,6 +161,9 @@
 - copying is better option compared to referencing, copy wont affect the original value.
 - ES8 spread operator can be used to copy the object
 - Function args
+- Spread operator can be used with doms NodeList, convert into arrays and we can apply array methods on that.
+- use spread operator to seperate dom element and use within [] to convert to array of items.
+
 
 #### EXE
 
@@ -210,3 +215,34 @@
 #### EXE
 
 > use find, findIndex, every and some
+
+### for in 
+- iterate over object properties
+- not advised to use it on arrays, especially if the order is important.
+- on arrays use "for of" loop instead
+
+### Object keys, values and entries
+- converts property names into array
+- converts property values into array
+- converts both
+
+### Set Object
+
+- stores collection of any values of unique object
+- new Set()
+- add(value)
+- delete(value)
+- clear()
+- has(value)
+- set accepts iterable objects, like array of values
+
+### String includes()
+- method to check the string value exist in the string
+
+### Array includes()
+- method to check if the item is availblable in the array or not
+
+
+
+
+
