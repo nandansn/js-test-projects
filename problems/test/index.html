@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: grid;
+            row-gap: 20px;
+        }
+        div.quote {
+           
+            width: 100px;
+            height: 100px;
+            background-color: lightseagreen;
+            color: whitesmoke;
+            font-family: 'Courier New', Courier, monospace;
+            align-items: center;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <button id='btn-nse'>Get NSE Data</button>
+        <div id="nifty"></div>
+    </div>
+    
+
+    </div>
+</body>
+<script>
+
+    let btnNse = document.getElementById('btn-nse');
+    let divNifty = document.getElementById('nifty');
+
+
+    
+
+    console.log('nanda');
+
+    btnNse.addEventListener('click', async function () {
+
+        await getData()
+        .then(response => response.json())
+	    .then(response => {
+            divNifty.setAttribute('class','quote')
+            divNifty.textContent = response.body.data[0].lastPrice
+        })
+        
+	    .catch(err => console.error(err));
+
+       
+        
+    })
+
+    
+
+
+    
+
+
+function getData() {
+    const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Host': 'nse-data1.p.rapidapi.com',
+		'X-RapidAPI-Key': '0fdf09419bmshaa73d2898c6b627p1af539jsn12567f8b9a73'
+	}
+ }
+    return fetch('https://nse-data1.p.rapidapi.com/nifty_fifty_indices_data', options);
+    
+}
+
+
+	
+
+
+
+
+</script>
+</html>
