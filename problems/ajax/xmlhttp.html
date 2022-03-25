@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <h1>AJAX</h1>
+    
+</body>
+<script>
+
+const parser = new DOMParser()
+
+    
+    let httpRequest = new XMLHttpRequest();
+    httpRequest.open('GET','https://www1.nseindia.com/products/dynaContent/equities/indices/historical_pepb.jsp?indexName=NIFTY%2050&fromDate=01-03-2022&toDate=21-03-2022&yield1=pe&yield2=undefined&yield3=undefined&yield4=undefined',true)
+    httpRequest.onreadystatechange = function () {
+        console.log('nanda');
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            console.log(httpRequest.responseText);
+            const virtualDoc = parser.parseFromString(httpRequest.responseText, 'text/html')
+            Array.from(virtualDoc.querySelectorAll('td.date'))
+            Array.from(virtualDoc.querySelectorAll('td.number')).map(
+               (item,index) => {
+
+               } 
+            )
+        }
+        
+    }
+    httpRequest.send();
+</script>
+</html>
