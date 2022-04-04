@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h2cls {
+            color: blue;
+            letter-spacing: 1rem;
+            font-size: 10rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+
+    </div>
+
+    <button id='btn'>Change Style</button>
+</body>
+<script>
+    let divEl = document.getElementById('content')
+
+    let h2El = document.createElement('h2')
+    let h2Text = document.createTextNode('Welcome')
+
+    h2El.appendChild(h2Text);
+    divEl.appendChild(h2El)
+
+    let btnEl = document.getElementById('btn')
+    btnEl.addEventListener('click', function (params) {
+        h2El.classList.add('h2cls')
+    })
+
+</script>
+</html>
