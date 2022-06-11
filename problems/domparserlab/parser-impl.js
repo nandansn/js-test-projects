@@ -3,15 +3,32 @@ export function pipeLineTaskRefParser() {
 
     let textAreaEl = document.getElementById('payload')
     let pipeLine = JSON.parse(textAreaEl.value);  
+
+    console.log(pipeLine);
     let operators = pipeLine.nodes;
+
+    console.log(operators);
   
     let taskOperators = operators.filter((item) => {
-      return item.operator["taskType"] !== undefined;
+      console.log(item.operator);
+      return item.operator["taskType"] !== undefined || item.operator['task_type'] !== undefined;
     });
+
+    
   
     let liEls = taskOperators
       .map((item) => {
-        return `<li>${item.operator.task.key.split(":")[1]}</li>`;
+
+        let taskKey = item.operator.task.key;
+        
+
+        if (taskKey.includes('drsRef')) {
+          taskKey = item.operator.task.key.split("/").at(-1)
+        }  else if (taskKey.includes(':')) {
+          taskKey = item.operator.task.key.split(":").at(-1)
+        }
+
+        return `<li>${taskKey}</li>`;
       })
       .join("")
       .trim();
@@ -29,15 +46,20 @@ export function pipeLineTaskRefParser() {
 
     let textAreaEl = document.getElementById('payload')
     let payload = JSON.parse(textAreaEl.value);  
-    let nodes = payload.pipeline.nodes;
-  
+
+    console.log(payload);
+    let nodes = payload.nodes;
+
+
     let taskOperators = nodes.filter((item) => {
+      console.log(item);
       return item.operator["modelType"] === 'TASK_OPERATOR';
     });
 
-    
+    console.log(taskOperators);
 
     let integrationTasks = taskOperators.filter((item) => {
+      //console.log(item);
         return item.operator.task["modelType"] === 'INTEGRATION_TASK';
     })
  

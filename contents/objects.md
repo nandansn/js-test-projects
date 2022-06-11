@@ -46,7 +46,7 @@
 	let bp = function ()  {
     	console.log(this)
 	}
-	let person = {
+	let person = {~
 	    fname:'nanda',
     	dp,
     	bp
