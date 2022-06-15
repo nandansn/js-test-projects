@@ -1,3 +1,12 @@
+
+##
+	- Object Basics
+	- this
+	- Factory Functions
+	- Constructor Functions
+	- Prototypal Inheritance
+	- ES6 class syntax
+
 ## Objects
 - Objetcs are collection of key value pairs, property values can be string, numbers, booleans, arrays and functions, however if the property value is function its called a method.
 
@@ -97,7 +106,7 @@
 - avoid defining the method within the constructor, go for prototype.
 - Object.prototype property can be used to achieive the inheritance
 - JS uses prototypal inheritance model. This means that every constructor function/class has a prototype property that is shared by every instance of the constructor/class. so any properties and methods or prototype can be accessed by every instance. protoype property returns a object.
-
+fafac
 - in protoype we are not copying the functions in the prototype to all the objects instead we are accessig from the prototype.
 
 - exe: create prototype take bank deposit and withdraw as an example.
@@ -149,7 +158,7 @@
 	dpAge.apply(nanda,['sfo','ca']);
 
 ### Bind:
-- assign, use later, 
+- assign to a variable, use the variable and call it later, when required. 
 - arguments - list of items
 - while creating the object itself we bind the function, this function will be called later based on some condtion
 - during event listener we may need to execute the function on the object
