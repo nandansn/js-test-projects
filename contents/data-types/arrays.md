@@ -108,3 +108,359 @@
 #### how to compare arrays?
 
 That’s simple: don’t use the == operator. Instead, compare them item-by-item in a loop or using iteration methods
+
+---
+
+## Array methods
+
+### Add/remove items
+
+We already know methods that add and remove items from the beginning or the end:
+
+- arr.push(...items) – adds items to the end,
+- arr.pop() – extracts an item from the end,
+- arr.shift() – extracts an item from the beginning,
+- arr.unshift(...items) – adds items to the beginning.
+
+### splice
+
+- How to delete an element from the array?
+
+- The arrays are objects, so we can try to use delete:
+
+  `{ let arr = ["I", "go", "home"]; delete arr[1]; // remove "go" alert( arr[1] ); // undefined // now arr = ["I", , "home"]; alert( arr.length ); // 3 }`
+
+- The element was removed, but the array still has 3 elements, we can see that arr.length == 3.
+
+- That’s natural, because delete obj.key removes a value by the key. It’s all it does. Fine for objects. But for arrays we usually want the rest of elements to shift and occupy the freed place. We expect to have a shorter array now.
+
+- So, special methods should be used.
+
+- The **arr.splice** method is a swiss army knife for arrays. It can do everything: insert, remove and replace elements.
+
+**syntax**
+
+`arr.splice(start[, deleteCount, elem1, ..., elemN])`
+
+**Negative indexes allowed**
+
+`let arr = [1, 2, 5]; // from index -1 (one step from the end) // delete 0 elements, // then insert 3 and 4 arr.splice(-1, 0, 3, 4); alert( arr ); // 1,2,3,4,5`
+
+### slice
+
+**Syntax**
+`arr.slice([start], [end])`
+
+It returns a new array copying to it all items from index start to end (not including end). Both start and end can be negative, in that case position from array end is assumed.
+
+It’s similar to a string method str.slice, but instead of substrings it makes subarrays.
+
+`let arr = ["t", "e", "s", "t"]; alert( arr.slice(1, 3) ); // e,s (copy from 1 to 3) alert( arr.slice(-2) ); // s,t (copy from -2 till the end)`
+
+We can also call it without arguments: arr.slice() creates a copy of arr. That’s often used to obtain a copy for further transformations that should not affect the original array.
+
+### concat
+
+The method arr.concat creates a new array that includes values from other arrays and additional items.
+
+The syntax is:
+
+`arr.concat(arg1, arg2...)`
+
+It accepts any number of arguments – either arrays or values.
+The result is a new array containing items from arr, then arg1, arg2 etc.
+If an argument argN is an array, then all its elements are copied. Otherwise, the argument itself is copied.
+
+**code start**
+
+let arr = [1, 2];
+// create an array from: arr and [3,4]
+alert( arr.concat([3, 4]) ); // 1,2,3,4
+// create an array from: arr and [3,4] and [5,6]
+alert( arr.concat([3, 4], [5, 6]) ); // 1,2,3,4,5,6
+// create an array from: arr and [3,4], then add values 5 and 6
+alert( arr.concat([3, 4], 5, 6) ); // 1,2,3,4,5,6
+
+**code end**
+
+Normally, it only copies elements from arrays. Other objects, even if they look like arrays, are added as a whole:
+
+**code start**
+
+let arr = [1, 2];
+
+let arrayLike = {
+0: "something",
+length: 1
+};
+
+alert( arr.concat(arrayLike) ); // 1,2,[object Object]
+
+**code end**
+
+But if an array-like object has a special Symbol.isConcatSpreadable property, then it’s treated as an array by concat: its elements are added instead:
+
+**code start**
+
+let arr = [1, 2];
+
+let arrayLike = {
+0: "something",
+1: "else",
+[Symbol.isConcatSpreadable]: true,
+length: 2
+};
+
+alert( arr.concat(arrayLike) ); // 1,2,something,else
+
+**code end**
+
+### Iterate: forEach
+
+**The syntax:**
+
+arr.forEach(function(item, index, array) {
+// ... do something with item
+});
+
+### Searching in array
+
+#### indexOf/lastIndexOf and includes
+
+The methods arr.indexOf and arr.includes have the similar syntax and do essentially the same as their string counterparts, but operate on items instead of characters:
+
+    arr.indexOf(item, from) – looks for item starting from index from, and returns the index where it was found, otherwise -1.
+    arr.includes(item, from) – looks for item starting from index from, returns true if found.
+
+The **includes** method handles NaN correctly
+
+A minor, but noteworthy feature of includes is that it correctly handles NaN, unlike indexOf:
+
+const arr = [NaN];
+alert( arr.indexOf(NaN) ); // -1 (wrong, should be 0)
+alert( arr.includes(NaN) );// true (correct)
+
+#### find and findIndex/findLastIndex
+
+Imagine we have an array of objects. How do we find an object with the specific condition?
+
+The syntax is:
+
+**code start**
+
+let result = arr.find(function(item, index, array) {
+// if true is returned, item is returned and iteration is stopped
+// for falsy scenario returns undefined
+});
+
+The function is called for elements of the array, one after another:
+
+    item is the element.
+    index is its index.
+    array is the array itself.
+
+**code end**
+
+#### filter
+
+The find method looks for a single (first) element that makes the function return true.
+If there may be many, we can use arr.filter(fn).
+The syntax is similar to find, but filter returns an array of all matching elements:
+
+**code start**
+
+let results = arr.filter(function(item, index, array) {
+// if true item is pushed to results and the iteration continues
+// returns empty array if nothing found
+});
+
+**code end**
+
+### Transform an array
+
+Let’s move on to methods that transform and reorder an array.
+
+#### map
+
+The arr.map method is one of the most useful and often used.
+It calls the function for each element of the array and returns the array of results.
+The syntax is:
+
+**code start**
+
+let result = arr.map(function(item, index, array) {
+// returns the new value instead of item
+});
+
+**code end**
+
+---
+
+#### sort
+
+The call to arr.sort() sorts the array in place, changing its element order.
+It also returns the sorted array, but the returned value is usually ignored, as arr itself is modified.
+
+**code start**
+
+let arr = [ 1, 2, 15 ];
+
+// the method reorders the content of arr
+arr.sort();
+
+alert( arr ); // 1, 15, 2
+
+**code end**
+
+Did you notice anything strange in the outcome?
+The order became 1, 15, 2. Incorrect. But why?
+The items are sorted as strings by default.
+Literally, all elements are converted to strings for comparisons. For strings, lexicographic ordering is applied and indeed "2" > "15".
+To use our own sorting order, we need to supply a function as the argument of arr.sort().
+The function should compare two arbitrary values and return:
+
+**code start**
+
+function compareNumeric(a, b) {
+if (a > b) return 1;
+if (a == b) return 0;
+if (a < b) return -1;
+}
+
+let arr = [ 1, 2, 15 ];
+arr.sort(compareNumeric);
+alert(arr); // 1, 2, 15
+
+**code end**
+
+---
+
+#### reverse
+
+The method arr.reverse reverses the order of elements in arr.
+
+**code start**
+
+let arr = [1, 2, 3, 4, 5];
+arr.reverse();
+
+alert( arr ); // 5,4,3,2,1
+
+**code end**
+
+---
+
+#### split
+
+The str.split(delim) method does exactly that. It splits the string into an array by the given delimiter delim.
+
+**code start**
+
+let names = 'Bilbo, Gandalf, Nazgul';
+
+let arr = names.split(', ');
+
+for (let name of arr) {
+alert( `A message to ${name}.` ); // A message to Bilbo (and other names)
+}
+
+**code end**
+
+The split method has an optional second numeric argument – a limit on the array length. If it is provided, then the extra elements are ignored. In practice it is rarely used though:
+
+**code start**
+
+let arr = 'Bilbo, Gandalf, Nazgul, Saruman'.split(', ', 2);
+
+alert(arr); // Bilbo, Gandalf
+
+**code end**
+
+---
+
+#### join
+
+The call arr.join(glue) does the reverse to split. It creates a string of arr items joined by glue between them.
+
+**code start**
+let arr = ['Bilbo', 'Gandalf', 'Nazgul'];
+
+let str = arr.join(';'); // glue the array into a string using ;
+
+alert( str ); // Bilbo;Gandalf;Nazgul
+**code end**
+
+---
+
+#### reduce/reduceRight
+
+The methods arr.reduce and arr.reduceRight also belong to that breed, but are a little bit more intricate. They are used to calculate a single value based on the array.
+
+The syntax is:
+
+**code start**
+
+let value = arr.reduce(function(accumulator, item, index, array) {
+// ...
+}, [initial]);
+
+**code end**
+
+Arguments:
+
+- accumulator – is the result of the previous function call, equals initial the first time (if initial is provided).
+- item – is the current array item.
+- index – is its position.
+- array – is the array.
+
+The method **arr.reduceRight** does the same, but goes from right to left.
+
+---
+
+#### Array.isArray
+
+Arrays do not form a separate language type. They are based on objects.
+
+So typeof does not help to distinguish a plain object from an array:
+
+**code start**
+
+alert(typeof {}); // object
+alert(typeof []); // object (same)
+
+alert(Array.isArray({})); // false
+alert(Array.isArray([])); // true
+
+**code end**
+
+#### Most methods support “thisArg”
+
+Almost all array methods that call functions – like find, filter, map, with a notable exception of sort, accept an optional additional parameter thisArg.
+
+The value of thisArg parameter becomes this for func.
+
+**code start**
+
+let army = {
+minAge: 18,
+maxAge: 27,
+canJoin(user) {
+return user.age >= this.minAge && user.age < this.maxAge;
+}
+};
+
+let users = [
+{age: 16},
+{age: 20},
+{age: 23},
+{age: 30}
+];
+
+// find users, for who army.canJoin returns true
+let soldiers = users.filter(army.canJoin, army);
+
+alert(soldiers.length); // 2
+alert(soldiers[0].age); // 20
+alert(soldiers[1].age); // 23
+
+**code end**
