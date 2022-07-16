@@ -8,7 +8,7 @@
 
 ### Internal JS
 
-- adding JS within the script tag, like below.
+- adding JS within the script tag, like below. within the html file.
 
 > < script> alert('hello'); </ script>
 
@@ -203,13 +203,13 @@
 
 ### switch statement
 
-- instead of using mnested if else we can use switch case
+- instead of using nested if else we can use switch case
 
 ### Loops
 
 - repeatedly to run the block of the code, while condition is true
 - while, do ..while, for
-- while, runs the code block when the condition is tru.
+- while, runs the code block when the condition is true.
 - do..while, runs once the code block and repeated if the condition is true
 - for
   - start value
@@ -219,8 +219,8 @@
 ### String properties and methods
 
 - you can refer the string methods from forums
-- you can access the string methods usinf string var or string literals
-- length, property find the lengt of the string
+- you can access the string methods using string var or string literals
+- length, property find the length of the string
 - toUpperCase() method to make the string as upper case chars
 - charAt(0), method returns the char at index '0'
 - indexOf('a'), method returns the char position in the string.
@@ -241,8 +241,7 @@
 - unshift(), to add item at the begining of the array.
 - shift(), to remove the item at the begining of the array.
 - push(), to add the item at the last
-- pop(), to remove the item
-  from the last.
+- pop(), to remove the item from the last.
 - splice(), mutates original array, pass the index and number of items, removes the items from the specified index.
 
 ### Value vs Reference
@@ -324,8 +323,8 @@
 
 ### Array Iterators
 
-- there are powerful array methods to iterate over array, no for loop required.
-- accept call back function as an argument, calls callback against each item in a array.
+- there are powerful array methods to iterate over array,  'for' loop is not required.
+- accept callback function as an argument, calls callback against each item in a array.
 reference item in the call back parameter.
 
 

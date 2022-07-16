@@ -23,4 +23,4 @@
 
 
 #### Note
-- when you work locally, use the live server, otherwise you get the CORS policy error.
+- when you work locally, use the live server, otherwise you get the CORS policy error.first

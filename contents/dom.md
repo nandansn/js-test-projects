@@ -1,8 +1,3 @@
-## DOM
-
-- select an element or group of element.
-- decide the effect we want to apply to the element.
-
 ### Window object overview
 
 - browser api, gives api to work with browser.
@@ -11,6 +6,16 @@
 - to check the property of the document you can use console.dir(document)
 - each element has style property, with in the style property we have many css properties. we can check the supported css properties for an element in the console and apply the effect accordingly
 
+## DOM
+
+- select an element or group of element.
+- decide the effect we want to apply to the element.
+
+### BOM
+
+The Browser Object Model (BOM) represents additional objects provided by the browser (host environment) for working with everything except the document.
+
+[Reference] (https://javascript.info/browser-environment)
 
 ### getElementById
 
@@ -37,106 +42,113 @@
 - the function returns the HTMLCollection
 
 ### querySelectorAll
- - node-list => objects are collection of nodes
- - can run forEach
- - turn them into array - spread operator [...]
- - after that can use any array properties
- - Only the NodeList object can contain attribute nodes and text nodes.
- - When you want to access the text node use the querySelector
- - Diff: ref: https://stackoverflow.com/questions/15763358/difference-between-htmlcollection-nodelists-and-arrays-of-objects
 
- ### How to use xpath?
+- node-list => objects are collection of nodes
+- can run forEach
+- turn them into array - spread operator [...]
+- after that can use any array properties
+- Only the NodeList object can contain attribute nodes and text nodes.
+- When you want to access the text node use the querySelector
+- Diff: ref: https://stackoverflow.com/questions/15763358/difference-between-htmlcollection-nodelists-and-arrays-of-objects
 
- - document.evaluate('//body', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+### How to use xpath?
 
- [References] (https://developer.mozilla.org/en-US/docs/Web/API/Document/evaluate)
+- document.evaluate('//body', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
- ### Navigating the DOM
+[References] (https://developer.mozilla.org/en-US/docs/Web/API/Document/evaluate)
 
- - childNodes - returns all childnodes including whitespace, which is treated as text nodes,
+### Navigating the DOM
 
- - children - returns non-whitespace nodes
+- childNodes - returns all childnodes including whitespace, which is treated as text nodes,
 
- - firstChild
+- children - returns non-whitespace nodes
 
- - lastChild 
+- firstChild
 
- - parentElement - property returns the parent element of the selected element
+- lastChild
 
- - nextSibling - returns the sibling after the selected element, this may return the textNodes as sibling if exist
- 
- - previousSibling - returns the sibling before the selected element, this may return the textNodes as sibling if exist
+- parentElement - property returns the parent element of the selected element
 
- - nextElementSibling - returns the next element not the text or comment nodes.
+- nextSibling - returns the sibling after the selected element, this may return the textNodes as sibling if exist
 
- - previousElementSibling - returns the previous element not the text or comment nodes.
+- previousSibling - returns the sibling before the selected element, this may return the textNodes as sibling if exist
 
- - nodeValue - returns the text value in the element. you need to use firstChild of index and then nodeValue property
+- nextElementSibling - returns the next element not the text or comment nodes.
 
- - textContent - property used to get the text value directly from the element
+- previousElementSibling - returns the previous element not the text or comment nodes.
 
- ### attributes, getAttribute, setAttribute
+- nodeValue - returns the text value in the element. you need to use firstChild of index and then nodeValue property
 
- - html element attribute
- - we can use the get and sett attribute method to update or access the attribute of the element, 
+- textContent - property used to get the text value directly from the element
 
- ### classList and className
+### attributes, getAttribute, setAttribute
 
- - adding css class dynamically
- - we cann apply multiple classes on the element using the classList property and add method.
- - we can remove multiple classes on the element using the classList property and remove method.
- - we can check availability of a class on the element using the classList property and contains method.
+- html element attribute
+- we can use the get and sett attribute method to update or access the attribute of the element,
 
- > element.classLit.add('classOne');
- >
- > element.classLit.add('classTwo');
- >
- > element.classLit.remove('classTwo');
+### classList and className
 
- ### createElement, createTextNode, appendChild
+- adding css class dynamically
+- we cann apply multiple classes on the element using the classList property and add method.
+- we can remove multiple classes on the element using the classList property and remove method.
+- we can check availability of a class on the element using the classList property and contains method.
 
- - createElement method is used to create new element in the document
- - use appendChild method add the newly created element under specific html element
- - use createTextNode method to add text with in the element, we have to use append child method to add textNode in the element
+> element.classLit.add('classOne');
+>
+> element.classLit.add('classTwo');
+>
+> element.classLit.remove('classTwo');
 
- ### inserBefore,
- - method to insert the element, before the specified element.
- - document.body.insertBefore('elementToBeInserted','beforeWhichElement')
+### createElement, createTextNode, appendChild
 
- ### replaceChild,
- - method to replace the old element with new element.
- - document.body.replaceChild(newElement, oldElement)
- - note: you need to create new element and you have to replace with existing element
+- createElement method is used to create new element in the document
+- use appendChild method add the newly created element under specific html element
+- use createTextNode method to add text with in the element, we have to use append child method to add textNode in the element
 
- ### prepend
- - method to add element before the element
+### inserBefore,
 
- ### removeChild, remove
+- method to insert the element, before the specified element.
+- document.body.insertBefore('elementToBeInserted','beforeWhichElement')
 
- - remove method in the element is used to remove from document
- - select the element, apply the remove method on the selected element.
- - remove child method is to remove the child with in the selected parent element.
+### replaceChild,
 
- ### innerHTML and textContent
+- method to replace the old element with new element.
+- document.body.replaceChild(newElement, oldElement)
+- note: you need to create new element and you have to replace with existing element
+
+### prepend
+
+- method to add element before the element
+
+### removeChild, remove
+
+- remove method in the element is used to remove from document
+- select the element, apply the remove method on the selected element.
+- remove child method is to remove the child with in the selected parent element.
+
+### innerHTML and textContent
 
 - you can use innetHTML to add element with html syntax.
 
-### style 
+### style
 
 - dynamically you can change the style using the style property in the specific element.
 
 ### Events
+
 - Events are used to make the website interactive
 - only few of them covered
 - we need to understand the principle of the events
- 
- #### click event,
- - simple event, clicking some kind of element.
- - event handling :
-    - select the element
-    - addEventListener(), 2 args, what is the event, how to handle the event or what to do when the event occurs.
+
+#### click event,
+
+- simple event, clicking some kind of element.
+- event handling :
+  - select the element
+  - addEventListener(), 2 args, what is the event, how to handle the event or what to do when the event occurs.
 
 #### mouseevents
+
 - fires after full action occurs
 - mousedown - button is pressed
 - mouseup - button is released
@@ -144,21 +156,24 @@
 - mouseleave - moved out of an element
 
 #### key events
+
 - keypress - when key is pressed
 - keydown - when key is down
 - keyup - when key is released
 
 #### EventObject
+
 - in the call back function we can get the event object as an argument
 - this event object has the info about the event triggered
 - event.currentTarget, has the element that triggered the event
 - preventDefault method ignores the default behaviour of the element.
 
 ### currentTarget vs target
+
 - currentTarget refers to the element to which the event handler (addEventListener) has been attached.
 - target identifies the element on which the event triggered
-- eventhough the button performs click action there could be span element, within the button, in the code it is implemented like, where click event attached to button, but further action may happen only when the 
-evet.target === span text satisfied.
+- eventhough the button performs click action there could be span element, within the button, in the code it is implemented like, where click event attached to button, but further action may happen only when the
+  evet.target === span text satisfied.
 - currentTarget refers 'this'
 
 - [Reference] (https://javascript.info/bubbling-and-capturing)
@@ -168,8 +183,8 @@ evet.target === span text satisfied.
 - this allows to select the element dynamically.
 - event propogation - order the events are fired
 - event bubbling - When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
-For instance, a focus event does not bubble. There are other examples too, we’ll meet them. But still it’s an exception, rather than a rule, most events do bubble.
-clicked element first then bubbles up, this is default behaviour, we can override the default behaviour, we can use stopPropogation() method in the event object and stop the bubbling up functionality.
+  For instance, a focus event does not bubble. There are other examples too, we’ll meet them. But still it’s an exception, rather than a rule, most events do bubble.
+  clicked element first then bubbles up, this is default behaviour, we can override the default behaviour, we can use stopPropogation() method in the event object and stop the bubbling up functionality.
 - event capturing - fires at the root and fires until reaches the target
 
 ### Forms
@@ -183,19 +198,19 @@ clicked element first then bubbles up, this is default behaviour, we can overrid
 
 - web storage api - provided by browser
 - session storage, local storage
- - setItem, getItem, removeItem, clear
- - localstorage keeps the data until the browser is closed, when u open new tabs still the values in the local storage exists, when you open the new browser the saved the value in the local storage exists
- - session storage keeps the data in single tab/single session when you open the new tab the values will not be available in the new tab
+- setItem, getItem, removeItem, clear
+- localstorage keeps the data until the browser is closed, when u open new tabs still the values in the local storage exists, when you open the new browser the saved the value in the local storage exists
+- session storage keeps the data in single tab/single session when you open the new tab the values will not be available in the new tab
 
 ### Locatstorage with multiple values
 
-- JSON.stringify() - use to store the multiple values  like array
+- JSON.stringify() - use to store the multiple values like array
 - JSON.parse() - use parse method to get the values.
 
 ### setTimeout
 
 - on window object
-- we can pass function as references, 
+- we can pass function as references,
 - used to execute the function passed to setTimeout after specified time
 - returns unique identifier
 - clearTimeout to cancel
@@ -203,26 +218,32 @@ clicked element first then bubbles up, this is default behaviour, we can overrid
 - you can pass arguments to referenced function like, setTimeout(refFunction, timeout, '1','2')
 - clearTimeout to cancel the setTimeout
 
-### setInterval 
+### setInterval
+
 - runs the referenced function periodically at specific intervals.
 - setInterval(refFunction, timeInterval, '1','2')
 - clearInterval use to cancel the setInterval
 
 ### DOMContentLoaded
+
 - event fires when the initial document has been completely loaded and parsed, without waiting for stylesheets, images and subframes to finish loading.
 
 ### load event
--   the load event is fired when the whole page has loaded, including all dependent resources such as stylesheets and images. This is in contrast to DOMContentLoaded, which is fired as soon as the page DOM has been loaded, without waiting for resource to finish loading.
+
+- the load event is fired when the whole page has loaded, including all dependent resources such as stylesheets and images. This is in contrast to DOMContentLoaded, which is fired as soon as the page DOM has been loaded, without waiting for resource to finish loading.
 
 ### scroll event
+
 - this event occurs when we do horizontal or vertical scrolling,
 - to track the ui x and y co-ordinates use
 
 ### width, height properties, getBoundingClientRect method
+
 - innerWidth - inner width of the window
 - innerHeight - inner height of the window
 - these properties will be used when we want to our UI to react according to the window sizing.
 - getBoundingClientRect to get the (top, bottom, left, right margins, width, height dizes, x,y coords) of an element
 
 ### resize event
+
 - resize event triggeres when we resize the browser windows
