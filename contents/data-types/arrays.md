@@ -2,7 +2,7 @@
 
 ### About
 
-- used to stored ordered collection of data
+- used to store ordered collection of data
 - For example, we need that to store a list of something: users, goods, HTML elements etc.
   - It is not convenient to use an object here, because it provides no methods to manage the order of elements. We can’t insert a new property “between” the existing ones. Objects are just not meant for such use.
 
