@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let numbers = [];
+    let inputFlag = true;
+    while (inputFlag) {
+      let input = prompt("number:");
+      console.log(input);
+      if (input === null) {
+        break;
+      }
+      let number = parseInt(input);
+      if (number !== NaN && number) {
+        numbers.push(number);
+      } else {
+        break;
+      }
+    }
+
+    let total = numbers.reduce((total, i) => {
+      total = total + i;
+      return total;
+    }, 0);
+
+    alert(total);
+  </script>
+</html>
