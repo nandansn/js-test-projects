@@ -133,3 +133,5 @@ Some good-to-follow rules are:
 - Stay away from abbreviations or short names like a, b, c, unless you really know what you’re doing.
 - Make names maximally descriptive and concise. Examples of bad names are data and value. Such names say nothing. It’s only okay to use them if the context of the code makes it exceptionally obvious which data or value the variable is referencing.
 - Agree on terms within your team and in your own mind. If a site visitor is called a “user” then we should name related variables currentUser or newUser instead of currentVisitor or newManInTown.
+
+---
