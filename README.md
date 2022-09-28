@@ -622,3 +622,45 @@ Refer: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/status
 
 ### ES6 Slider
 
+### Notes
+
+JS Notes;
+https://www.youtube.com/watch?v=Bm4HZMbcSAs&list=PLqq-6Pq4lTTZ_LyvzfrndUOkIvOF4y-_c&index=24&ab_channel=JavaBrains
+https://www.youtube.com/watch?v=ke_y6z0xRpk&ab_channel=AkshaySaini
+
+
+https://www.freecodecamp.org/news/how-recursion-works-explained-with-flowcharts-and-a-video-de61f40cb7f9/
+https://www.freecodecamp.org/news/discover-the-power-of-first-class-functions-fd0d7b599b69/
+
+https://forum.freecodecamp.org/t/freecodecamp-challenge-guide-copy-an-array-with-the-spread-operator/301157
+https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/copy-an-array-with-the-spread-operator
+
+
+https://docs.emmet.io/abbreviations/syntax/
+https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
+
+Mocha + JS
+
+https://github.com/lo1tuma/eslint-plugin-mocha/issues/241
+
+Dynamically Generated Test:
+
+https://mochajs.org/#dynamically-generating-tests
+
+ESLint Configuring Rules:
+
+https://eslint.org/docs/user-guide/getting-started
+
+https://eslint.org/docs/user-guide/configuring/rules#configuring-rules
+
+https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/no-setup-in-describe.md
+
+ES Lint Setup:
+
+https://medium.com/gits-apps-insight/utilizing-git-hook-by-using-eslint-husky-and-lint-staged-18b6f6f60f1e
+https://dev.to/ajmaurya/set-up-eslint-prettier-and-pre-commit-hooks-using-husky-for-wordpress-from-scratch-1djk
+https://github.com/typicode/husky
+
+
+
+
