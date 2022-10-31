@@ -218,3 +218,8 @@ To resolve the following problems,
 - to create unique objects to avoid collision
 
 [Reference] (https://www.youtube.com/watch?v=4J5hnOCj69w)
+
+## Cloning of objects
+
+- [Ref] (https://www.samanthaming.com/tidbits/70-3-ways-to-clone-objects/)
+

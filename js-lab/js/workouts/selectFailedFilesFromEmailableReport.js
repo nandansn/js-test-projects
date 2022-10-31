@@ -45,7 +45,8 @@ allTest.forEach((test,index) => {
       .find(
         (element) =>
           element.includes('"status":"ERROR"') ||
-          element.includes('"patchStatus":"FAILED"')
+          element.includes('"patchStatus":"FAILED"') ||
+          element.includes('"code" : "BadRequest"')
       );
 
    
