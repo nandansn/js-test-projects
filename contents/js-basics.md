@@ -77,7 +77,7 @@
 
   ### Numbers
 
-  - loosely type, dent declare type.
+  - loosely type, don't declare type.
   - example for loosley typed
 
   > let age = 30;
