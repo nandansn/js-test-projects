@@ -280,6 +280,8 @@
 
 ### Truthy or Falsy
 
+- falsy values "", '', ``, 0. -0, null, undefined, NaN
+
 - in javascript condition there is truthy or falsy value, for example, let s = 'a'
   is truthy and s = '' is falsy
 
