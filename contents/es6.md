@@ -48,10 +48,23 @@
 - combine the function name and template literal
 - defint the function with the text and args(as ...vars), text will be an array, use map, map with index and text item, pass replace params in the text with the vars[index]
 
+let greet = greetTag`hello my name is ${fname} age is ${age} from city ${city}`;
+
+function greetTag(text, ...args) {
+  let finalText = text
+    .map((item, index) => {
+      return item + args[index];
+    })
+    .join('');
+
+  console.log(finalText);
+}
+
 ### Arrow Functions
 
 - Arrow functions or Fat Arrow Functions
 - no name, always expression, assign to variable
+- one line funciton code, no need to use the explicit return statement
 - no function keyword
 - 'this' will treat differently
 
@@ -189,6 +202,9 @@
 >
 > use with params in the function
 
+
+[Ref] (https://www.freecodecamp.org/news/javascript-object-destructuring-spread-operator-rest-parameter/)
+
 ### Array.of, Array.from
 
 - .of and .from not on the prototype
@@ -222,9 +238,9 @@
 - on arrays use "for of" loop instead
 
 ### Object keys, values and entries
-- converts property names into array
-- converts property values into array
-- converts both
+- keys - converts property names into array
+- values - converts property values into array
+- entries - converts both name and value into 2 dimensional array
 
 ### Set Object
 
@@ -235,6 +251,11 @@
 - clear()
 - has(value)
 - set accepts iterable objects, like array of values
+- iterators
+	- entries()
+	- keys()
+	- values()
+	- forEach()
 
 ### String includes()
 - method to check the string value exist in the string
