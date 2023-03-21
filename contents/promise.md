@@ -44,3 +44,9 @@ Consumers: then, catch
 - The call .finally(f) is similar to .then(f, f) in the sense that f runs always, when the promise is settled: be it resolve or reject.
 
 - The idea of finally is to set up a handler for performing cleanup/finalizing after the previous operations are complete.
+
+**Note** :
+
+[Ref] https://dev.to/lydiahallie/javascript-visualized-promises-async-await-5gke
+
+FYI, when you know that a promise will always resolve or always reject, you can write Promise.resolve or Promise.reject , with the value you want to reject or resolve the promise with!
