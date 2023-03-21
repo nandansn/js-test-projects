@@ -34,7 +34,7 @@ Ref: (https://www.youtube.com/watch?v=DqGwxR_0d1M)
 
 - 'prototype' is a property of a constructor function, and it is used to define the properties and methods that will be inherited by instances created with that constructor.
 
-```
+```[label](https://www.google.com/maps/place/Penser/%4011.3280257%2C77.7374096%2C3a%2C75y%2C61.81h%2C90t/data%3D%213m7%211e1%213m5%211sRhB_7zYNM7c_hOT6qKSCxg%212e0%216shttps%3A//streetviewpixels-pa.googleapis.com/v1/thumbnail%3Fpanoid%3DRhB_7zYNM7c_hOT6qKSCxg%26cb_client%3Dsearch.gws-prod.gps%26w%3D86%26h%3D86%26yaw%3D61.81389%26pitch%3D0%26thumbfov%3D100%217i13312%218i6656%214m7%213m6%211s0x3ba96fa20f222dd1%3A0xf871ca48da4e90a7%218m2%213d11.3280682%214d77.7374488%2110e5%2116s/g/11mqwmgly3)
 function Person(name) {
   this.name = name;
 }

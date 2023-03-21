@@ -1,0 +1,8 @@
+// What is a callback function
+
+/*
+
+A callback function is a function passed into another function as an argument. 
+This function is invoked inside the outer function to complete an action. Let's take a simple example of how to use callback function
+
+*/
