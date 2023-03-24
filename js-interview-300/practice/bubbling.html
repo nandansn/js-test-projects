@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #parent {
+            width: 40rem;
+            height: 20rem;
+            border-color: blue;
+            border-style: solid;
+            text-align: center;
+            padding: 5rem;
+        }
+        #child {
+            width: 20rem;
+            height: 10rem;
+        
+            border-color: blue;
+            border-style: solid;
+            text-align: center;
+            padding: 1rem;
+            display: flex;
+            float: left;
+        }
+        button {
+            background-color: brown;
+            color: white;
+            margin: 1rem;
+            width: 4rem;
+            height: 4rem;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="parent">
+        <div id="child">
+            <button id="btn-1">Click Me</button>
+            <button id="btn-2">Click Me</button>
+            <button id="btn-3">Click Me</button>
+        </div>
+    </div>
+    
+</body>
+<script>
+    const parent = document.getElementById('parent');
+    const child = document.getElementById('child');
+    const btn = document.getElementById('btn');
+
+    parent.addEventListener('click', function(event) {
+        console.log(event.target.id);
+    }, {capture:true})
+
+
+    // btn.addEventListener('click', function(event) {
+    //     console.log(event);
+    // });
+
+</script>
+</html>

@@ -47,3 +47,7 @@ const john = new Person('John');
 john.greet(); // prints "Hello, my name is John"
 
 ```
+
+### Event Propogation:
+
+- [ref] (https://javascript.info/bubbling-and-capturing)
