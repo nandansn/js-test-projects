@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>89</title>
+  </head>
+  <body>
+    <div class="contianer">
+      <h2 id="os"></h2>
+    </div>
+  </body>
+
+  <script>
+    console.log(navigator.platform);
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+      let h2El = document.getElementById("os");
+      h2El.textContent = navigator.platform;
+    });
+  </script>
+</html>

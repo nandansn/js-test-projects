@@ -5,7 +5,8 @@
 URL encoding and decoding is the process of converting special characters and reserved characters in a URL into a format that can be transmitted over the internet. 
 There are various use cases for URL encoding and decoding, some of which are:
 
-1. Sending data via HTTP GET or POST requests: When sending data via HTTP GET or POST requests, the data needs to be encoded to ensure that any special characters in the data do not interfere with the URL or the request itself.
+1. Sending data via HTTP GET or POST requests: When sending data via HTTP GET or POST requests, 
+the data needs to be encoded to ensure that any special characters in the data do not interfere with the URL or the request itself.
 
 2. Creating links: When creating links that contain special characters, URL encoding is used to ensure that the link is properly formatted and can be clicked on without any errors.
 

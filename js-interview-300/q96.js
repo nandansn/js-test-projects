@@ -13,3 +13,6 @@ For example, the below link notify the message without reloading the page
 </a>
 
 */
+
+
+// create a new function that adds 2 numbers /

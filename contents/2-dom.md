@@ -79,7 +79,7 @@ The Browser Object Model (BOM) represents additional objects provided by the bro
 
 - nodeValue - returns the text value in the element. you need to use firstChild of index and then nodeValue property
 
-- textContent - property used to get the text value directly from the element
+- textContent - property used to get or set the text content of a node.
 
 ### attributes, getAttribute, setAttribute
 

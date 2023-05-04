@@ -362,6 +362,11 @@ reference item in the call back parameter.
 - 2 parameter ('curr') - current iteration/value
 - return acc
 
+### square bracket notation:
+
+- represent the object property as square bracket notation
+- total[subject]
+
 ### Math and Date Objects
 
 #### Math

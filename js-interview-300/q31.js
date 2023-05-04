@@ -10,6 +10,7 @@ periodic background syncs, push notifications, intercept and handle network requ
 ref:
 
 https://www.youtube.com/watch?v=ksXwaWHCW6k
+https://www.youtube.com/watch?v=HlYFW2zaYQM&ab_channel=TraversyMedia
 https://www.geeksforgeeks.org/service-workers-in-javascript/
 
 

@@ -51,3 +51,16 @@ john.greet(); // prints "Hello, my name is John"
 ### Event Propogation:
 
 - [ref] (https://javascript.info/bubbling-and-capturing)
+
+  **textContent:** is a property that retrieves or sets the text content of an element. It returns the plain text content of an element, including all its descendants, but without any HTML tags. It can also be used to change the text content of an element, replacing it with new text. For example, element.textContent = "new text";
+
+  **innerHTML:** is a property that retrieves or sets the content of an element, including any HTML tags it contains. It returns the HTML content of an element as a string. It can also be used to change the content of an element, including adding or removing HTML tags. For example, element.innerHTML = "<h1>New heading</h1>";
+
+  **innerText:** is a property similar to textContent, which returns only the text content of an element, excluding any HTML tags. However, it does not return the text content of hidden elements, and it also respects CSS styling that can change the display of text. It can also be used to change the text content of an element, replacing it with new text. For example, element.innerText = "new text";
+
+  **text node:** is a type of DOM node that represents a piece of text within an HTML document. It is created automatically when text is added to an HTML element using one of the text manipulation properties or methods.
+
+  **value:** is a property used to retrieve or set the value of a form element, such as an input or textarea element. It returns the current value of the form element as a string, which can be used to submit form data to a server. It can also be used to set the value of a form element. For example, inputElement.value = "new value";
+
+**primitive**
+In JavaScript, a primitive (primitive value, primitive data type) is data that is not an object and has no methods or properties.
