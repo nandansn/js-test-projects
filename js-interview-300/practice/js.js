@@ -10,3 +10,5 @@ function addTwoNumbers(a, b) {
 }
 
 console.log(addTwoNumbers(2, 3));
+
+"nandakkabcdc".replace()
