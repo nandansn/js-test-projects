@@ -64,3 +64,14 @@ john.greet(); // prints "Hello, my name is John"
 
 **primitive**
 In JavaScript, a primitive (primitive value, primitive data type) is data that is not an object and has no methods or properties.
+
+**how to get frame in the page**
+
+```
+var theFrame = document.getElementsByTagName("frame")[0];
+var theFrameDocument = theFrame.contentDocument || theFrame.contentWindow.document;
+var button = theFrameDocument.getElementById("mybutton");
+
+```
+
+[reference] (https://stackoverflow.com/questions/14944699/accessing-the-document-object-of-a-frame-with-javascript)
