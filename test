@@ -1,0 +1,35 @@
+
+    class A {
+        staic int x​​
+A(String  browserName){
+    ​​
+    System.out.println(“Browser Name: ”+browserName);
+}
+void display() {
+    ​​
+}​​
+class B extends A {
+    
+    B(String browserName) {
+        super(browserName)
+    }​​
+}​​
+
+
+abstract class A {
+ 
+abstract void m1();
+abstract void m2();
+abstract void m3();
+}
+ 
+class B extends A {
+void m1(){
+ 
+}
+ 
+void m2(){
+ 
+}
+
+}
