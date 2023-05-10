@@ -8,4 +8,6 @@ The reason for this is rooted in the design of web browsers, where JavaScript is
 
 While JavaScript itself is single-threaded, it is still possible to use techniques such as Web Workers or Async/Await to perform tasks in parallel or asynchronously, albeit not in the same way as traditional multi-threading. Additionally, recent advancements in JavaScript engines and Web APIs have introduced features like SharedArrayBuffer and Atomics, which allow for some limited multi-threading in JavaScript.
 
+https://dev.to/ohdylan/javascript-single-threaded-but-non-blocking-198e
+
 */

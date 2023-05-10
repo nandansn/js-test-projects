@@ -64,3 +64,42 @@ john.greet(); // prints "Hello, my name is John"
 
 **primitive**
 In JavaScript, a primitive (primitive value, primitive data type) is data that is not an object and has no methods or properties.
+
+**how to get frame in the page**
+
+```
+var theFrame = document.getElementsByTagName("frame")[0];
+var theFrameDocument = theFrame.contentDocument || theFrame.contentWindow.document;
+var button = theFrameDocument.getElementById("mybutton");
+
+```
+
+[reference] (https://stackoverflow.com/questions/14944699/accessing-the-document-object-of-a-frame-with-javascript)
+
+## Build Tools:
+
+Build tools are known as programs that automate the process of building an executable application from source code. This building process includes activities like compiling, linking, and packaging the code into an executable form, etc.
+
+[Reference](https://themeselection.com/javascript-build-tools/)
+
+### HTMLCollection v NodeList
+
+**Additional note**
+What is the difference between a HTMLCollection and a NodeList?
+A HTMLCollection contains only element nodes (tags) and a NodeList contains all nodes.
+
+**Most important node types:**
+
+element node
+attribute node
+text node
+comment node
+node types
+
+[reference](https://stackoverflow.com/questions/15763358/difference-between-htmlcollection-nodelists-and-arrays-of-objects)
+
+### What we need to know?
+
+- Need to experiement Progressive Web Application
+- Service worker
+-
