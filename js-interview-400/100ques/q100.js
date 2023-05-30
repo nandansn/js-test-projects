@@ -15,3 +15,8 @@ This method takes two arguments: the name of the event you want to listen for, a
 For example, the following code adds an event listener to a button element that logs a message to the console when it is clicked:
 
 */
+
+
+function userAlert(params) {
+    
+}
