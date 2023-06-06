@@ -5,8 +5,9 @@
  */
 
 
-function total(…args){
+function total(...args){
 let sum = 0;
+typeof args
 for(let i of args){
 sum+=i;
 }
